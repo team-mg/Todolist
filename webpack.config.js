@@ -4,9 +4,10 @@ module.exports = {
     entry: './app/client/src/App.tsx',
     output: {
         filename: 'bundle.js',
-        path: __dirname + '/dist'
+        path: __dirname + '/dist',
+        publicPath: '/dist/'
     },
-    devtool: 'source-map',
+    devtool: 'inline-source-map',
     mode: 'development',
 
     resolve: {
