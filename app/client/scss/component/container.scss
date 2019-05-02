@@ -1,0 +1,37 @@
+@import '../button';
+
+.content {
+    .write_form_area {
+        margin: 10px auto;
+        .blind {
+            visibility: hidden;
+        }
+        .input_text {
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background: #CCC;
+            padding: 6px 10px;
+            color: #000;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .input_container {
+            padding-right: 76px;
+            display: block;
+            height: 30px;
+        }
+        .btn {
+            float: right;
+            width: 50px;
+            top: -30px;
+            position: relative;
+        }
+    }
+    .todolist_area {
+        .list_todolist {
+            padding: 0;
+        }
+    }
+}

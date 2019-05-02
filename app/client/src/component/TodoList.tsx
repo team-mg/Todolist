@@ -3,11 +3,8 @@ import Todo from "../data/Todo";
 import { connect } from "react-redux";
 import { Action } from "redux";
 import TodoAction from '../action/TodoAction';
-// interface Props {
-//     todo: Todo,
-//     onEditClick(id:number): (event:any) => void,
-//     onRemoveClick(id:number): (event:any) => void
-// };
+import * as styles from '../../scss/component/list.scss';
+
 interface States {
     mode: string;
     title: string;
@@ -47,18 +44,17 @@ class TodoList extends React.Component<Props, States> {
         let titleView:React.ReactElement;
         let editBtn:React.ReactElement;
         if (this.state.mode === MODE.EDIT){
-            titleView = <input type="text" defaultValue={this.state.title} ref={(ref:HTMLInputElement) => (this.titleRef = ref)}/>
-            editBtn = <button type="button" className="btn" onClick={this.onClickUpdate.bind(this)}>업데이트</button>
+            titleView = <input type="text" className={styles.input_text} defaultValue={this.state.title} ref={(ref:HTMLInputElement) => (this.titleRef = ref)}/>
+            editBtn = <button type="button" onClick={this.onClickUpdate.bind(this)}>업데이트</button>
         } else {
-            titleView = <div className="title">{this.state.title}</div>
-            editBtn = <button type="button" className="btn" onClick={this.onClickEdit.bind(this)}>수정</button>
+            titleView = <div className={styles.title}>{this.state.title}</div>
+            editBtn = <button type="button" onClick={this.onClickEdit.bind(this)}>수정</button>
         }
-        return (<li className="list_item">
+        return (<li className={styles.list_item}>
             {titleView}
-            <div className="btn_area">
+            <div className={styles.btn_area}>
             {editBtn}
             <button type="button" 
-                    className="btn" 
                     onClick={this.props.onRemoveClick(this.props.todo.id)}>삭제</button>
             </div>
         </li>);

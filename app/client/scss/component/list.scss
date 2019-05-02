@@ -1,0 +1,23 @@
+.list_item {
+    margin-top: 10px;
+    padding: 5px 0;
+    border-top: 1px #ccc solid;
+    font-size: 0;
+    .title {
+        font-size: 20px;
+        color: black;
+        display: inline-block;
+    }
+    .btn_area {
+        float: right;
+        right: 5px;
+    }
+    .input_text {
+        font-size: 20px;
+        color: black;
+        border: none;
+        background: #ccc;
+        width: 100%;
+        padding-right: 50px;
+    }
+}

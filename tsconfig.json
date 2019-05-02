@@ -8,6 +8,7 @@
         "jsx": "react"
     },
     "include": [
-        "./app/client/src/**/*"
+        "./app/client/src/**/*",
+        "./app/client/scss/**/*"
     ]
 }

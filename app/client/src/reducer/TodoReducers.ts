@@ -1,4 +1,3 @@
-import {combineReducers} from 'redux';
 import { Action } from '../action/TodoAction';
 import ActionTypes from '../action/ActionTypes';
 import Todo, { TodoData } from '../data/Todo';
