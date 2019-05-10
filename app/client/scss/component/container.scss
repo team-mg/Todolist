@@ -18,15 +18,14 @@
             width: 100%;
         }
         .input_container {
-            padding-right: 76px;
-            display: block;
+            padding-right: 20px;
             height: 30px;
+            display: inline-block;
+            margin-right: 10px;
+            width: calc(100% - 80px);
         }
         .btn {
-            float: right;
             width: 50px;
-            top: -30px;
-            position: relative;
         }
     }
     .todolist_area {

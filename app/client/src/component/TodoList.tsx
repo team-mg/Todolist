@@ -43,16 +43,23 @@ class TodoList extends React.Component<Props, States> {
     render() {
         let titleView:React.ReactElement;
         let editBtn:React.ReactElement;
+        let cName:string;
+        let btnCName:string;
         if (this.state.mode === MODE.EDIT){
             titleView = <input type="text" className={styles.input_text} defaultValue={this.state.title} ref={(ref:HTMLInputElement) => (this.titleRef = ref)}/>
             editBtn = <button type="button" onClick={this.onClickUpdate.bind(this)}>업데이트</button>
+            cName = styles.input_container;
+            btnCName = styles.btn_input_area;
         } else {
             titleView = <div className={styles.title}>{this.state.title}</div>
             editBtn = <button type="button" onClick={this.onClickEdit.bind(this)}>수정</button>
+            cName = styles.title_container;
+            btnCName = styles.btn_area;
         }
         return (<li className={styles.list_item}>
-            {titleView}
-            <div className={styles.btn_area}>
+            <span className={cName}>{titleView}</span>
+            
+            <div className={btnCName}>
             {editBtn}
             <button type="button" 
                     onClick={this.props.onRemoveClick(this.props.todo.id)}>삭제</button>

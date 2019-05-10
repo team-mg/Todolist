@@ -3,21 +3,38 @@
     padding: 5px 0;
     border-top: 1px #ccc solid;
     font-size: 0;
-    .title {
-        font-size: 20px;
-        color: black;
+    .title_container {
+        padding-right: 10px;
         display: inline-block;
+        width: calc(100% - 110px);
+        .title {
+            font-size: 20px;
+            color: black;
+            width: 100%;
+            display: inline-block;
+        }
+    }
+    .input_container {
+        margin-right: 10px;
+        display: inline-block;
+        width: calc(100% - 138px);
+        .input_text {
+            font-size: 20px;
+            color: black;
+            border: none;
+            background: #ccc;
+            width: 100%;
+            display: inline-block;
+        }
     }
     .btn_area {
-        float: right;
+        width: 100px;
         right: 5px;
+        display: inline-block;
     }
-    .input_text {
-        font-size: 20px;
-        color: black;
-        border: none;
-        background: #ccc;
-        width: 100%;
-        padding-right: 50px;
+    .btn_input_area {
+        width: 128px;
+        right: 5px;
+        display: inline-block;
     }
 }
